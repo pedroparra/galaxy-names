@@ -21,5 +21,13 @@ describe('galaxy-names', function () {
 			var randomItem = galaxyNames.random();
 			expect(galaxyNames.all).to.include(randomItem);
 		});
+
+		it('should return a random items if passed a number', function () {
+			var randomItem = galaxyNames.random(3);
+			expect(randomItem).to.have.length(3);
+			randomItem.forEach(function (item) {
+				expect(galaxyNames.all).to.include(item);
+			});
+		});
 	});
 });
