@@ -4,8 +4,13 @@ var getRandomItem = uniqueRandomArray(data);
 
 module.exports = {
 	all: data,
-	random: random
+	random: random,
+	addItem: addItem
 };
+
+function addItem(name) {
+	data.push(name);
+}
 
 function random(number) {
 	if (number === undefined) {

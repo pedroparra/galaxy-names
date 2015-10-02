@@ -30,4 +30,13 @@ describe('galaxy-names', function () {
 			});
 		});
 	});
+
+	describe('add', function() {
+		it('should add a name to galaxyNames array', function () {
+			galaxyNames.addItem('exampleName');
+			console.log(galaxyNames.all);
+			expect(galaxyNames.all).to.include('exampleName');
+		});
+	});
+
 });
