@@ -14,13 +14,8 @@ var getRandomItem = (0, _uniqueRandomArray2['default'])(_galaxyNamesJson2['defau
 
 module.exports = {
 	all: _galaxyNamesJson2['default'],
-	random: random,
-	addItem: addItem
+	random: random
 };
-
-function addItem(name) {
-	_galaxyNamesJson2['default'].push(name);
-}
 
 function random(number) {
 	if (number === undefined) {

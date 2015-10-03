@@ -31,12 +31,4 @@ describe('galaxy-names', () => {
 		});
 	});
 
-	describe('add', () => {
-		it('should add a name to galaxyNames array', () => {
-			galaxyNames.addItem('exampleName');
-			console.log(galaxyNames.all);
-			expect(galaxyNames.all).to.include('exampleName');
-		});
-	});
-
 });
