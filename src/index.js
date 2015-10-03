@@ -1,6 +1,7 @@
-var uniqueRandomArray = require('unique-random-array');
-var data = require('./galaxy-names.json');
-var getRandomItem = uniqueRandomArray(data);
+import uniqueRandomArray from 'unique-random-array';
+import data from './galaxy-names.json';
+
+let getRandomItem = uniqueRandomArray(data);
 
 module.exports = {
 	all: data,

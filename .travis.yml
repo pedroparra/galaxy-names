@@ -20,6 +20,7 @@ before_script:
 script:
   - npm run test:single
   - npm run check-coverage
+  - npm run build
 after_success:
   - python travis_after_all.py
   - export $(cat .to_export_back)

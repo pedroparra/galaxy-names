@@ -1,9 +1,9 @@
-var expect = require('chai').expect;
-var galaxyNames = require('../src/index');
+import {expect} from 'chai';
+import galaxyNames from '../src/index';
 
-describe('galaxy-names', function () {
-	describe('all', function () {
-		it('should be an array of strings', function () {
+describe('galaxy-names', () => {
+	describe('all', () => {
+		it('should be an array of strings', () => {
 			expect(galaxyNames.all).to.satisfy(isArrayOfStrings);
 			function isArrayOfStrings(array) {
 				return array.every(function (item) {
@@ -11,18 +11,18 @@ describe('galaxy-names', function () {
 				});
 			}
 		});
-		it('should content `Andromeda`', function () {
+		it('should content `Andromeda`', () => {
 			expect(galaxyNames.all).to.include('Andromeda');
 		});
 	});
 
-	describe('random', function () {
-		it('should return a random item from the galaxyNames.all', function () {
+	describe('random', () => {
+		it('should return a random item from the galaxyNames.all', () => {
 			var randomItem = galaxyNames.random();
 			expect(galaxyNames.all).to.include(randomItem);
 		});
 
-		it('should return a random items if passed a number', function () {
+		it('should return a random items if passed a number', () => {
 			var randomItem = galaxyNames.random(3);
 			expect(randomItem).to.have.length(3);
 			randomItem.forEach(function (item) {
@@ -31,8 +31,8 @@ describe('galaxy-names', function () {
 		});
 	});
 
-	describe('add', function() {
-		it('should add a name to galaxyNames array', function () {
+	describe('add', () => {
+		it('should add a name to galaxyNames array', () => {
 			galaxyNames.addItem('exampleName');
 			console.log(galaxyNames.all);
 			expect(galaxyNames.all).to.include('exampleName');
