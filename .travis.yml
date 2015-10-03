@@ -29,6 +29,3 @@ after_success:
   - export $(cat .to_export_back)
   - npm run report-coverage
   - npm run semantic-release
-branches:
-  except:
-    - "/^v\\d+\\.\\d+\\.\\d+$/"
