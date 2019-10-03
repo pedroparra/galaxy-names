@@ -1,6 +1,6 @@
 {
   "name": "galaxy-names",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Example of simple npm module with tests and ecmascript 6 support.",
   "main": "./dist/index.js",
   "scripts": {
